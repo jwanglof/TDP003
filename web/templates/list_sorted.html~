@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block subnav %}
+    <div style="float: left">
+    <h3>Sort by:</h3>
+    <form method="post" action="/list">
+      <input type="submit" name="name" value="Name" /> <br />
+      <input type="submit" name="id" value="ID" /> <br />
+      <input type="submit" name="top" value="Top projects" />
+    </form>
+    </div>
+{% endblock %}
+
+{% block content %}
+    {% if data %}
+    <div class="list">
+      {% if request.method == "POST" %}
+            <h1>Projects sorted by ...</h1>
+            {% for sort in _list %}
+	       {{ sort }}
+	       {% for rows in data %}
+	          {{ rows }}
+	       {% endfor %}
+            {% endfor %}
+      {% else %}
+      <h1>Most Recent Projects</h1>
+      {% for rows in data %}
+      <div class="container">
+	<img src="{{ rows["snapshot"] }}" />
+	<div class="summary">
+	  <h3><a href="/project/{{ rows["id"] }}">{{ rows["project_name"] }}</a></h3>
+	  <br />
+	  {{ rows["summary"] }}
+	</div>
+	<div class="links">
+	  Screenshots | Source code | Comments
+	</div>
+      </div>
+      {% endfor %}
+      {% endif %}
+    </div>
+    {% elif show %}
+    asd
+    {% endif %} 
+{% endblock %}

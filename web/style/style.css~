@@ -1,0 +1,83 @@
+body {
+    background-color: #c0c0c0;
+    margin: 0em; padding: 0em;
+}
+
+h1 {
+    color: #377ba8;
+    font-family: "Georgia", serif;
+    margin: 0em;
+}
+
+#nav {
+    background-color: #c0a5a5;
+    border-bottom: 1px solid #c0c0c0;
+    width: 100%;
+
+    margin: 0em;
+
+    font-family: "Georgia", serif;
+    font-size: 2em;
+    word-spacing: 3em;
+    
+    padding-left: 1em;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+#nav a:visited {
+    color: #000000;
+}
+
+#subnav {
+    background-color: #c09898;
+    border-bottom: 1px solid #c0a5a5;
+    height: 8em;
+}
+
+#content {
+    padding: 0.5em;
+}
+
+.project img {
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid #377ba8;
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+}
+
+.project .summary {
+    
+}
+
+.project .container {
+    clear: both;
+}
+
+.project .links {
+}
+
+#subnav h3 {
+    color: #377ba8;
+    font-family: "Georgia", serif;
+    font-size: 2em;
+    margin: 0em;
+    display: block;
+}
+
+#subnav {
+    padding: 0.5em;
+}
+
+#subnav .search {
+    float: right
+}

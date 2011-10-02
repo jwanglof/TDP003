@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+   {% for rows in data %}
+     {% if rows["id"] == _show_id %}
+       <div class="project_container">
+	 <h1>{{ rows["project_name"] }}</h1>
+	 <img src="{{ rows["snapshot"] }}" />
+	 <div class="about">
+	   {{ rows["description"] }}
+	 </div>
+	 <div style="clear: both;">
+	   Screenshots | Source Code | Comments
+	 </div>
+       </div>
+     {% endif %}
+   {% endfor %}
+{% endblock %}

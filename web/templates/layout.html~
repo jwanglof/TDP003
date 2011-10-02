@@ -1,0 +1,25 @@
+<html>
+<head>
+  <title>TITEL</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for("static", filename="style.css") }}" />
+</head>
+<body>
+
+  <div id="nav">
+    <a href="/">/</a>
+    <a href="/list">/list</a>
+    <a href="/techniques">/techniques</a>
+    <a href="/data.cvs">asd</a>
+  </div>
+  <div id="subnav">
+    {% block subnav %}{% endblock %}
+    <form method="post" action="/search" class="search">
+      <input type="text" name="search_string" placeholder="Search..." />
+    </form>
+  </div>
+  <div id="content">
+    {% block content %}{% endblock %}
+  </div>
+
+</body>
+</html>

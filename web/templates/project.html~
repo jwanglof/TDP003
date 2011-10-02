@@ -1,0 +1,6 @@
+{% extends "layout.html" %}
+{% block content %}
+   {% for rows in data %}
+     {{ print rows }}
+   {% endfor %}
+{% endblock %}

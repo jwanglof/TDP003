@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block subnav %}
+    <div style="float: left">
+    <h3>Sort by:</h3>
+    <form method="post" action="/list">
+      <input type="submit" name="name" value="Name" /> <br />
+      <input type="submit" name="id" value="ID" /> <br />
+      <input type="submit" name="top" value="Top projects" />
+    </form>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="list">
+            <h1>Projects sorted by ...</h1>
+	       {% for rows in data %}
+	          {{ rows }}
+	       {% endfor %}
+
+{% endblock %}
