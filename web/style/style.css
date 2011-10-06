@@ -119,3 +119,12 @@ h1 {
     margin-right: 0.5em;
     text-align: right;
 }
+
+.sort_form input[type="submit"] {
+    border: 1px solid #000000;
+    width: 10em;
+}
+
+.highlight {
+    background-color: #c0c0c0;
+}

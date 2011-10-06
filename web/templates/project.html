@@ -1,12 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
-   {% for rows in data %}
-     {% if rows["id"] == _show_id %}
+   {% for rows in _db_data %}
+     {% if rows["project_no"] == _show_id %}
        <div class="project_container">
 	 <h1>{{ rows["project_name"] }}</h1>
-	 <img src="{{ rows["snapshot"] }}" />
+	 <img src="{{ rows["big_image"] }}" />
 	 <div class="about">
-	   {{ rows["description"] }}
+	   {{ rows["long_description"] }}
 	 </div>
 	 <div style="clear: both;">
 	   Screenshots | Source Code | Comments
