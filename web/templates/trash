@@ -1,0 +1,5 @@
+    <form method="post" action="/search" class="search">
+      <input type="text" name="search_string" placeholder="Search..." />
+      <br />
+      <input type="submit" value="Search" />
+    </form>

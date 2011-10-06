@@ -114,6 +114,8 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
 
     if isinstance(search, str) and len(search) > 0:
         search = unicode(search, "utf-8")
+    elif isinstance(search, unicode):
+        search = search
     else:
         search = None
 

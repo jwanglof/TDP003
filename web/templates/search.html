@@ -1,21 +1,39 @@
 {% extends "layout.html" %}
 
 {% block subnav %}
-    <form method="post" action="/search" class="search">
-      <input type="text" name="search_string" placeholder="Search..." />
-      <br />
-      Choose which categories to search in (must choose at least 1)
-      <br />
-      {% for i in keys %}
-      <input type="checkbox" name="search_categories" value="{{ i }}" /> {{ i }}
-      {% endfor %}
-      <br />
-      <input type="submit" value="Search" />
-    </form>
 {% endblock %}
 
 {% block content %}
-   {% for i in _search_result %}
-      {{ i }}
-   {% endfor %}
+    <form method="post" action="/search" class="search">
+      Choose which categories to search in (must choose at least 1):
+      <br />
+      {% for i in keys %} 
+      <input type="checkbox" name="search_categories" value="{{ i }}" /> {{ i }}
+      {% endfor %}
+      <br />
+      Choose which categories to sort on (you don't have to choose anything here):
+      <select name="sort_category">
+      {% for i in keys %}
+         {% if i == "start_date" %}
+            <option value="{{ i }}" selected />{{ i }}</option>
+         {% else %}
+            <option value="{{ i }}" />{{ i }}</option>
+         {% endif %}
+      {% endfor %}
+      </select>
+      <br />
+      Should the result be ascending or descending?
+      <select name="sort_order">
+	<option value="asc" selected>Ascending</option>
+	<option value="desc">Descending</option>
+      </select>
+      <br />
+      <input type="text" name="search_string" placeholder="Search..." />
+      <br />
+      <input type="submit" value="Search" />
+    </form>
+    {{ error }}
+    {% for i in _search_result %}
+       <a href="/project/{{ i["project_no"] }}">{{ i["project_name"] }}</a> <br />
+    {% endfor %}
 {% endblock %}
