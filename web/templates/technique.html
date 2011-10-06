@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+{% block content %}
+   <div id="technique">
+     <h1>{{ _tech }}</h1>
+     {% for i in _techniques %}
+        {% if i["name"] == _tech %}
+           {% for o in i["projects"] %}
+              <a href="/project/{{ o["id"] }}">{{ o["name"] }}</a> <br />
+           {% endfor %}
+        {% endif %}
+     {% endfor %}
+   </div>
+{% endblock %}

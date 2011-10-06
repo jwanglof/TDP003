@@ -1,4 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-   Techniques
-{% endblock %}xo
+   <div class="techniques">
+     <h1>Techniques used</h1>
+     {% for rows in _techniques %}
+        <h3><a href="/technique/{{ rows["name"] }}">{{ rows["name"] }}</a></h3>
+	<div class="container">
+	Number of times used: {{ rows["count"] }} <br />
+	<h4>Projects:</h4>
+	   <div class="projects">
+	     {% for project in rows["projects"] %}
+	        <a href="/project/{{ project["id"] }}"> {{ project["name"] }}</a>
+	     {% endfor %}
+	   </div>
+	</div>
+     {% endfor %}
+   </div>
+{% endblock %}

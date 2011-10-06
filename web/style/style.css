@@ -115,9 +115,7 @@ h1 {
 }
 
 #subnav .search {
-    float: right;
-    margin-right: 0.5em;
-    text-align: right;
+    margin-left: 0.5em;
 }
 
 .sort_form input[type="submit"] {
@@ -127,4 +125,28 @@ h1 {
 
 .highlight {
     background-color: #c0c0c0;
+}
+
+.techniques h3 a {
+    font-size: 1.3em;
+    margin: 1em 0em 0em 0em; padding: 0em;
+    color: #377ba8;
+    text-decoration: none;
+}
+
+.techniques h3 a:hover {
+    text-decoration: underline;
+}
+
+.techniques h4 {
+    font-size: 0.8em;
+    margin: 0em; padding: 0em;
+}
+
+.techniques .container {
+    padding: 0em 0em 0em 1em;
+}
+
+.techniques .projects {
+    padding: 0em 0em 0em 1em;
 }
