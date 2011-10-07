@@ -2,13 +2,17 @@
 
 {% block subnav %}
     <form method="post" action="/search" class="search">
-      Choose which categories to search in (must choose at least 1):
-      <br />
+      Choose which categories to search in (required):
       {% for i in keys %} 
       <input type="checkbox" name="search_categories" value="{{ i }}" /> {{ i }}
       {% endfor %}
       <br />
-      Choose which categories to sort on (you don't have to choose anything here):
+      Choose which techniques to limit the search to (not required):
+      {% for o in techs %}
+         <input type="checkbox" name="search_techniques" value="{{ o }}" /> {{ o }}
+      {% endfor %}
+      <br />
+      Choose which categories to sort on:
       <select name="sort_category">
       {% for i in keys %}
          {% if i == "start_date" %}

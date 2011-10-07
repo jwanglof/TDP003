@@ -78,6 +78,7 @@ def page_search():
 
     # keys is for the checkboxes
     keys = data._data[0].keys()
+    techs = data.retrieve_techniques()[1]
     error = ""
     sstring = ""
     
@@ -85,14 +86,15 @@ def page_search():
         _s_string = request.form["search_string"]
         _s_categories = request.form.getlist("search_categories")
         _s_sort_by = request.form["sort_category"]
-        _s_sort_order = request.form["sort_order"]
+        _s_sort_order = str(request.form["sort_order"])
+        _s_techniques = request.form.getlist("search_techniques")
 
         if len(_s_categories) > 0:
-            sstring = data.retrieve_projects(sort_by=_s_sort_by, sort_order=_s_sort_order, search=_s_string, search_fields=_s_categories)[1]
+            sstring = data.retrieve_projects(sort_by=_s_sort_by, sort_order=_s_sort_order, techniques=_s_techniques, search=_s_string, search_fields=_s_categories)[1]
         else:
             error = "You must specify at least one category to search in!"
 
-    return render_template("search.html", _search_result = sstring, keys=keys, error=error)
+    return render_template("search.html", _search_result = sstring, keys=keys, techs=techs, error=error)
 
 if __name__ == "__main__":
     app.run(debug=True)

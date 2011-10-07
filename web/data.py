@@ -1,7 +1,6 @@
 #! /usr/bin/env python
 # coding: utf-8
-import csv, os
-
+import csv, os, time
 
 # Error-code meaning:
 #   0 = OK
@@ -10,6 +9,7 @@ import csv, os
 _error_code = 1
 _error_meaning = ["Ok", "Something went wrong accessing the database. Please try again, or contact the webmaster.", "The project you're trying to access does not exist. Please choose another one"]
 _data = []
+_log = []
 
 # **** TODO ****
 # Implement the error codes!
@@ -60,24 +60,29 @@ def init():
                 row["techniques_used"] = []
 
         _error_code = 0
+
+        _log.append("Called init() to initiated the database-file at " + time.strftime("%Y-%m-%d %H:%M:%S") + "\n")
     except IOError:
         _error_code = 1
+        _log.append("Failed to initate the database-file at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code " + _error_code + "\n")
+    log()
 
 def project_count():
     # Returns how many projects there are in _data (which contains all the projects)
-
     global _error_code
     global _data
 
     if _error_code != 1:
         _error_code = 0
 
+    _log.append("Called project_count() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".")
+    log()
+
     return (_error_code, len(_data))
 
 def lookup_project(id):
     # To get a specific project's details
     # Will return _proj as a dictionary
-
     global _error_code
     global _data
 
@@ -89,6 +94,11 @@ def lookup_project(id):
     if len(_proj) == 0:
         _error_code = 2
         _proj = None
+        _log.append("Failed to lookup_project(id) with id:" + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".")
+    else:
+        _log.append("Called lookup_project(id) with id: " + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".")
+
+    log()
 
     return (_error_code, _proj)
 
@@ -97,7 +107,6 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
     # Create another loop inside the first one that goes through all the techniques that are specified
     # It checks if that technique is in the current project's techniques list
     # If it doesn't exist it will not be in the final result
-
     global _error_code
     global _data
 
@@ -185,6 +194,7 @@ def retrieve_techniques():
             _new_list.append(items)
 
     _error_code = 0
+
     return (_error_code, sorted(_new_list))
 
 
@@ -207,5 +217,18 @@ def retrieve_technique_stats():
                 _names.append({"id": rows["project_no"], "name": rows["project_name"]})
             _names = sorted(_names, key=lambda x: x["name"])
         _list.append({"count": _counter, "name": techs, "projects": _names})
-    _error_code = 0
+
+    if len(_list) > 0:
+        _error_code = 0
+    else:
+        _error_code = 1
+
     return (_error_code, _list)
+
+def log():
+    global _log
+
+    f = open("../LOG", "a")
+    f.writelines(_log)
+    f.close()
+    _log = []
