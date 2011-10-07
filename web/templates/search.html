@@ -1,9 +1,6 @@
 {% extends "layout.html" %}
 
 {% block subnav %}
-{% endblock %}
-
-{% block content %}
     <form method="post" action="/search" class="search">
       Choose which categories to search in (must choose at least 1):
       <br />
@@ -32,8 +29,27 @@
       <br />
       <input type="submit" value="Search" />
     </form>
+{% endblock %}
+
+{% block content %}
     {{ error }}
+    <div class="list">
     {% for i in _search_result %}
-       <a href="/project/{{ i["project_no"] }}">{{ i["project_name"] }}</a> <br />
+       <div class="container">
+	 <img src="{{ i["small_image"] }}" />
+	 <div class="summary">
+	   <h3><a href="/project/{{ i["project_no"] }}">{{ i["project_name"] }}</a></h3>
+	   <br />
+	   {{ i["short_description"] }}
+	 </div>
+	 <div class="links">
+	   Techniques used: {% for techs in i["techniques_used"] %}
+	  {{ techs }},
+	  {% endfor %}
+	  <br />
+	  Screenshots | Source code | Comments
+	</div>
+       </div>
     {% endfor %}
+    </div>
 {% endblock %}

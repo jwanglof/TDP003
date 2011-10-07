@@ -8,11 +8,13 @@ import csv, os
 #   1 = Error when accessing DB-file
 #   2 = The specific project ID doesn't exist
 _error_code = 1
+_error_meaning = ["Ok", "Something went wrong accessing the database. Please try again, or contact the webmaster.", "The project you're trying to access does not exist. Please choose another one"]
 _data = []
 
 # **** TODO ****
 # Implement the error codes!
 # Comment the entire code
+# Implement the logging system
 
 # FAAAAAAAAAAAAAAAAAAAAAAAAAAAAIL!!!!    
 def init():

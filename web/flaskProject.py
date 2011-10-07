@@ -51,7 +51,14 @@ def page_list():
 @app.route("/project/<id>")
 def page_project(id):
     data.init()
-    return render_template("project.html", _db_data=data._data, _show_id=int(id))
+    _project = data.lookup_project(id)[1]
+    _error = data.lookup_project(id)[0]
+
+    if _error > 0:
+        _project = ""
+        _error = data._error_meaning[_error]
+
+    return render_template("project.html", _db_data=_project, _error=_error)
 
 @app.route("/techniques")
 def page_techs():
