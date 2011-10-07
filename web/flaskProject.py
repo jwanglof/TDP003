@@ -68,21 +68,20 @@ def page_tech(tech):
 @app.route("/search", methods=["GET", "POST"])
 def page_search():
     data.init()
-    sstring = ""
+
     # keys is for the checkboxes
     keys = data._data[0].keys()
     error = ""
+    sstring = ""
     
     if request.method == "POST":
-        _search_string = request.form["search_string"]
-        _search_categories = request.form.getlist("search_categories")
-        _search_sort_by = request.form["search_categories"]
-        _search_sort_order = request.form["asc_desc"]
+        _s_string = request.form["search_string"]
+        _s_categories = request.form.getlist("search_categories")
+        _s_sort_by = request.form["sort_category"]
+        _s_sort_order = request.form["sort_order"]
 
-        # Something fucks everything up, get error 400.
-        if len(_search_categories) > 0:
-            sstring = data.retrieve_projects(sort_by=_search_sort_by, sort_order=_search_sort_order, search=_search_string, search_fields=_search_categories)[1]
-#            error = _search_sort_by, _search_sort_order, _search_string, _search_categories
+        if len(_s_categories) > 0:
+            sstring = data.retrieve_projects(sort_by=_s_sort_by, sort_order=_s_sort_order, search=_s_string, search_fields=_s_categories)[1]
         else:
             error = "You must specify at least one category to search in!"
 
