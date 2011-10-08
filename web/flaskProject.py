@@ -7,16 +7,20 @@ import data
 
 app = Flask(__name__)
 
-app.static_folder = "style"
-app.add_url_rule("/style/<path:filename>", endpoint="static", view_func=app.send_static_file)
-
-app.add_url_rule("/images/<path:filename>", endpoint="static", view_func=app.send_static_file)
+#app.static_folder = "style"
+#app.add_url_rule("/style/<path:filename>", endpoint="static", view_func=app.send_static_file)
 
 @app.route("/style/<filename>")
-def css(filename): pass
+def css(filename): 
+#    pass
+    with app.open_resource("style/" +filename) as f:
+        return f.read()
 
+#app.add_url_rule("/images/<path:filename>", endpoint="images")
 @app.route("/images/<filename>")
-def images(filename): pass
+def images(filename):
+    with app.open_resource("images/" +filename) as f:
+        return f.read()
 
 @app.route("/")
 def page_home():
@@ -46,6 +50,8 @@ def page_list():
         _data = data._data
         _highlight = None
 
+#    flash(data._error_meaning[data._error_code])
+#error=data._error_meaning[data._error_code]
     return render_template("list.html", _db_data=_data, _form_highlight = _highlight)
 
 @app.route("/project/<id>")

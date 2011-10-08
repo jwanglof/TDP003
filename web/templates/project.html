@@ -2,7 +2,7 @@
 {% block content %}
        <div class="project_container">
 	 <h1>{{ _db_data["project_name"] }}</h1>
-	 <img src="{{ _db_data["big_image"] }}" />
+	 <img src="{{ url_for("images", filename=_db_data["big_image"]) }}" />
 	 <div class="about">
 	   {{ _db_data["long_description"] }}
 	 </div>
