@@ -8,7 +8,10 @@ import csv, os, time
 #   2 = The specific project ID doesn't exist
 _error_code = 1
 _error_meaning = ["Ok", "Something went wrong accessing the database. Please try again, or contact the webmaster.", "The project you're trying to access does not exist. Please choose another one"]
+
+# _data will contain all the data from the CSV-database
 _data = []
+# _log will contain the logs
 _log = []
 
 # **** TODO ****
@@ -61,10 +64,13 @@ def init():
 
         _error_code = 0
 
-        _log.append("Called init() to initiated the database-file at " + time.strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        _log.append("Called init() to initiated the database-file at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
+
     except IOError:
         _error_code = 1
-        _log.append("Failed to initate the database-file at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code " + _error_code + "\n")
+        _log.append("Failed to initate the database-file with init() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code " + _error_code + ".\n")
+
+    # Calls the log-function so everything in _log is written to the log-file
     log()
 
 def project_count():
@@ -75,7 +81,7 @@ def project_count():
     if _error_code != 1:
         _error_code = 0
 
-    _log.append("Called project_count() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".")
+    _log.append("Called project_count() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
     log()
 
     return (_error_code, len(_data))
@@ -94,9 +100,9 @@ def lookup_project(id):
     if len(_proj) == 0:
         _error_code = 2
         _proj = None
-        _log.append("Failed to lookup_project(id) with id:" + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".")
+        _log.append("Failed to call lookup_project(id) with id:" + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code " + _error_code + "\n")
     else:
-        _log.append("Called lookup_project(id) with id: " + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".")
+        _log.append("Called lookup_project(id) with id: " + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
 
     log()
 
@@ -176,8 +182,13 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
 
     # Checks to see if any criteriums have been specified
     if _techs is None and _fields is None and search is None:
+        _log.append("Called retrieve_projects() without any arguments. Got all the data in the CSV-database file at " + time.strftime("%Y-%m-%d %H:%M:%S") + "\n")
         _new_list = _data
+    else:
+        _log.append("Called retrieve_projects() with argument(s) at " + time.strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        _log.append("\t Argument(s): \n\t\t Techniques: " + str(_techs) + " \n\t\t Search fields: " + str(_fields) + " \n\t\t Search string: " + str(search) + " \n\t\t Sorted by key: " + str(sort_by) + " \n\t\t Shown as: " + str(sort_order) + "\n")
 
+    log()
     return (_error_code, _new_list)
 
 def retrieve_techniques():
@@ -193,10 +204,11 @@ def retrieve_techniques():
         if items not in _new_list:
             _new_list.append(items)
 
+    _log.append("Called retrieve_techniques() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
+    log()
     _error_code = 0
 
     return (_error_code, sorted(_new_list))
-
 
 def retrieve_technique_stats():
     global _error_code
@@ -220,14 +232,18 @@ def retrieve_technique_stats():
 
     if len(_list) > 0:
         _error_code = 0
+        _log.append("Called retrieve_techniques_stats() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
     else:
         _error_code = 1
+        _log.append("Failed to call retrieve_techniques_stats() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code " + _error_code + "\n")
 
+    log()
     return (_error_code, _list)
 
 def log():
     global _log
 
+    # This will open the LOG-file that is in the root-folder of the project and write the lines that are in _log and then empty _log
     f = open("../LOG", "a")
     f.writelines(_log)
     f.close()
