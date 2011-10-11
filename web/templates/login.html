@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block content %}
-{% if login %}
+{% if session["sess_admin"] %}
    <strong>You are already logged in.</strong>
 {% else %}
    {% if error %} <strong>Error:</strong> {{ error }} {% endif %}

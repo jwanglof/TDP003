@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>TITEL</title>
+  <title>Portfolio by Johan and Simon</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for("css", filename="style.css") }}" />
   <link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
 </head>
@@ -14,6 +14,7 @@
        <a href="/login">/login</a>
     {% else %}
        <a href="/admin">/admin</a>
+       <a href="/logout">/logout</a>
     {% endif %}
     <div style="float: right; word-spacing: 0em;">Error: {{ data_error }}</div>
   </div>

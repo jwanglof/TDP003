@@ -1,1 +1,42 @@
-En fin readme-fil
+/TDP003
+	FLASKR_SETTINGS
+	  Contains the configuration. Is not implemented yet so the configuration is in the flaskProject.py-file in /web
+
+	LOG
+	  Contains all the log files that are created by web/data.py
+
+	README
+	  This file.
+	
+	/web
+	  Where all the files for this project are.
+
+	/images
+	  Folder for the images that are on the website
+
+	/style
+	  CSS-folder
+
+	/templates
+	  All .html-files
+
+	/templates/tools
+	  The tools for the admin-page
+
+
+INSTALLATION:
+	Requisitions:
+		A working Python setup. To install python, please refer to Python's download site at http://www.python.org/getit/
+		A working Python Flask setup. Please refer to Flask's site at http://flask.pocoo.org/ and look for the title "And Easy to Setup". Note that you will need a working Python setup for this!
+		A web browser of your choice. Google Chrome 14 and 15 was used when developing this site.
+
+	Instructions (for Linux):
+		Unzip TDP003.zip in a folder of your choice
+		Go to that folder in your terminal and into the web-subdirectory
+		Your path should be: /home/of/your/choice/web/
+		Type: "python2.7 flaskProject.py" (without the double-quotes)
+		You should now see this in your terminal if you haven't changed your Flask config:
+		    * Running on http://127.0.0.1:5000/
+		    * Restarting with reloader
+		The website is now running
+		Head over to http://127.0.0.1:5000 in your web browser and you should see the portfolio

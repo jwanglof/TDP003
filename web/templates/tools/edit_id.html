@@ -2,10 +2,16 @@
 
 {% block content %}
    <div class="edit">
-   <form method="post" action="{{ url_for("tools", tool="edit_id") }}">
+   <form method="post" action="{{ url_for("tools", tool="apply") }}">
 	 {% for i in keys %}
 	    <div class="text">{{ i.replace("_", " ").title() }}</div>
-	    <input type="text" name="{{ i }}" value="{{ data[i] }}" />
+	    {% if i == "project_no" %}
+	       <input type="text" name="{{ i }}" value="{{ data[i] }}" readonly style="background-color: #c0c0c0;" />
+	    {% elif i == "techniques_used" %}
+	       <input type="text" name="{{ i }}" value="{{ techs }}" />
+	    {% else %}
+	       <input type="text" name="{{ i }}" value="{{ data[i] }}" />
+	    {% endif %}
 	    <br />
 	 {% endfor %}
 	 <input type="submit" value="Edit '{{ data["project_name"] }}'" />

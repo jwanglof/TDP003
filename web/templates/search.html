@@ -54,7 +54,7 @@
     <div class="list">
     {% for i in _search_result %}
        <div class="container">
-	 <img src="{{ i["small_image"] }}" />
+	 <img src="{{ url_for("images", filename=i["small_image"]) }}" />
 	 <div class="summary">
 	   <h3><a href="/project/{{ i["project_no"] }}">{{ i["project_name"] }}</a></h3>
 	   <br />

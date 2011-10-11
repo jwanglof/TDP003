@@ -15,11 +15,10 @@ _data = []
 _log = []
 
 # **** TODO ****
-# Implement the error codes!
-# Comment the entire code
-# Implement the logging system
+# Implement the error codes! - Done
+# Comment the entire code - Done
+# Implement the logging system - Done
 
-# FAAAAAAAAAAAAAAAAAAAAAAAAAAAAIL!!!!    
 def init():
     # This initiates the CSV-file that contains all the projects
     # It tries to open the CSV-file and if it fails it will set _error_code to 1
@@ -75,6 +74,7 @@ def init():
 
 def project_count():
     # Returns how many projects there are in _data (which contains all the projects)
+
     global _error_code
     global _data
 
@@ -90,6 +90,7 @@ def project_count():
 def lookup_project(id):
     # To get a specific project's details
     # Will return _proj as a dictionary
+
     global _error_code
     global _data
 
@@ -114,6 +115,7 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
     # Create another loop inside the first one that goes through all the techniques that are specified
     # It checks if that technique is in the current project's techniques list
     # If it doesn't exist it will not be in the final result
+
     global _error_code
     global _data
 
@@ -193,6 +195,8 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
     return (_error_code, _new_list)
 
 def retrieve_techniques():
+    # Name says it all..
+
     global _data
     global _error_code
 
@@ -212,6 +216,8 @@ def retrieve_techniques():
     return (_error_code, sorted(_new_list))
 
 def retrieve_technique_stats():
+    # To get all the techniques used for the different projects. Have a counter to know how many times a certain tehnique have been used
+
     global _error_code
     global _data
 
@@ -242,10 +248,14 @@ def retrieve_technique_stats():
     return (_error_code, _list)
 
 def log():
+    # This will open the LOG-file that is in the root-folder of the project and write the lines that are in _log and then empty _log
+
     global _log
 
-    # This will open the LOG-file that is in the root-folder of the project and write the lines that are in _log and then empty _log
-    f = open("../LOG", "a")
-    f.writelines(_log)
-    f.close()
-    _log = []
+    try:
+        f = open("../LOG", "a")
+        f.writelines(_log)
+        f.close()
+        _log = []
+    except IOError:
+        return "Log-file doesn't exist."

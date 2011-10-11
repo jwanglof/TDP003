@@ -121,29 +121,43 @@ def page_admin():
     data_error = data._error_meaning[data._error_code]
     return render_template("admin.html", data=data._data, data_error=data_error)
 
+#@app.route("/tools/apply", method=["GET", "POST"])
+#def tools_apply(data):
+#    data.init()
+#    if data == "id":
+#        return render_template("home.html")
+
 @app.route("/tools/<path:tool>", methods=["GET", "POST"])
 def tools(tool):
     data.init()
     s_id = None
     keys = None
+    te = None
+    _data = data._data
     if tool == "edit":
         page = "edit.html"
-        _data = data._data
     elif tool == "submit":
         page = "test.html"
-        _data = data._data
     elif tool[0:7] == "edit_id":
         page = "edit_id.html"
         _data = data.lookup_project(tool[8:10])[1]
         s_id = tool[8:10]
         keys = data._data[0].keys()
+
+        techs = data.retrieve_techniques()[1]
+        te = ""
+        for p in techs:
+            te += p + ","
+    elif tool[0:5] == "apply":
+        page = "edit.html"
+
     # Don't need tool, just for dev
-    return render_template("tools/" + page, data=_data,tool=tool,s_id=s_id,keys=keys)
+    return render_template("tools/" + page, data=_data,tool=tool,s_id=s_id,keys=keys,techs=te)
 
 @app.route("/login", methods=["GET", "POST"])
 def page_login():
     error = None
-    login = None
+
     if request.method == "POST":
         if request.form["username"] != app.config["USERNAME"]:
             error = "Invalid Username."
@@ -153,9 +167,14 @@ def page_login():
             session["sess_admin"] = True
             flash("You were logged in.")
             return redirect(url_for("page_admin"))
-    elif session["sess_admin"]:
-        login = True
-    return render_template("login.html", error=error,login=login)
+
+    return render_template("login.html", error=error)
+
+@app.route("/logout")
+def logout():
+    session.pop("sess_admin", None)
+    flash("You were logged out.")
+    return redirect(url_for("page_home"))
 
 if __name__ == "__main__":
     app.run(debug=True)
