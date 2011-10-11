@@ -2,20 +2,22 @@
 <head>
   <title>TITEL</title>
   <link rel="stylesheet" type="text/css" href="{{ url_for("css", filename="style.css") }}" />
+  <link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-
   <div id="nav">
     <a href="/">/</a>
     <a href="/list">/list</a>
     <a href="/techniques">/techniques</a>
     <a href="/search">/search</a>
   </div>
-  <div id="subnav">
-    {% block subnav %}{% endblock %}
-  </div>
   <div id="content">
+    <div id="lefty">
     {% block content %}{% endblock %}
+    </div>
+    <div id="righty">
+          {% block subnav %}{% endblock %}
+    </div>
   </div>
 
 </body>

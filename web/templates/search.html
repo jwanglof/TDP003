@@ -2,35 +2,49 @@
 
 {% block subnav %}
     <form method="post" action="/search" class="search">
+      <div class="search_block">
       Choose which categories to search in (required):
       {% for i in keys %} 
-      <input type="checkbox" name="search_categories" value="{{ i }}" /> {{ i }}
+         <div class="category">
+	   <input type="checkbox" name="search_categories" value="{{ i }}" /> {{ i.replace("_", " ").title() }}
+         </div>
       {% endfor %}
-      <br />
+      </div>
+      
+      <div class="search_block">
       Choose which techniques to limit the search to (not required):
       {% for o in techs %}
-         <input type="checkbox" name="search_techniques" value="{{ o }}" /> {{ o }}
+         <div class="category">
+           <input type="checkbox" name="search_techniques" value="{{ o }}" /> {{ o.replace("_", " ").title() }}
+	 </div>
       {% endfor %}
-      <br />
+      </div>
+
+      <div class="search_block">
       Choose which categories to sort on:
       <select name="sort_category">
       {% for i in keys %}
          {% if i == "start_date" %}
-            <option value="{{ i }}" selected />{{ i }}</option>
+            <option value="{{ i }}" selected />{{ i.replace("_", " ").title() }}</option>
          {% else %}
-            <option value="{{ i }}" />{{ i }}</option>
+            <option value="{{ i }}" />{{ i.replace("_", " ").title() }}</option>
          {% endif %}
       {% endfor %}
       </select>
-      <br />
+      </div>
+      
+      <div class="search_block">
       Should the result be ascending or descending?
       <select name="sort_order">
 	<option value="asc" selected>Ascending</option>
 	<option value="desc">Descending</option>
       </select>
-      <br />
-      <input type="text" name="search_string" placeholder="Search..." />
-      <br />
+      </div>
+
+      <div class="search_block">
+	<input type="text" name="search_string" placeholder="Search for..." / class="search">
+      </div>
+
       <input type="submit" value="Search" />
     </form>
 {% endblock %}

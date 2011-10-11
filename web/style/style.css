@@ -1,6 +1,7 @@
 body {
     background-color: #c0c0c0;
     margin: 0em; padding: 0em;
+    font-family: "Antic", sans-serif;
 }
 
 h1 {
@@ -10,14 +11,13 @@ h1 {
 }
 
 #nav {
-    background-color: #c0a5a5;
-    border-bottom: 1px solid #c0c0c0;
+    border-bottom: 2px solid #e6e6e6;
     width: 100%;
 
     margin: 0em;
 
     font-family: "Georgia", serif;
-    font-size: 2em;
+    font-size: 1.2em;
     word-spacing: 3em;
     
     padding-left: 1em;
@@ -44,6 +44,23 @@ h1 {
 
 #content {
     padding: 0.5em;
+    border: 0px solid #000000;
+    clear: both;
+}
+
+#content #lefty {
+    float: left;
+    border: 0px solid #000000;
+    width: 75%;
+}
+
+#content #righty {
+    float: right;
+    width: 25%;
+}
+
+.list {
+    width: 100%;
 }
 
 .list img {
@@ -149,4 +166,17 @@ h1 {
 
 .techniques .projects {
     padding: 0em 0em 0em 1em;
+}
+
+.search_block {
+    display: block;
+    margin-bottom: 0.6em;
+}
+
+.search_block .category {
+    display: block;
+}
+
+.search_block .search {
+    width: 20em;
 }
