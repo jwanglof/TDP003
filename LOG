@@ -1,0 +1,328 @@
+asddsaCalled init() to initiated the database-file at 2011-10-10 15:56:46.
+Called retrieve_techniques() at 2011-10-10 15:56:46.
+Called retrieve_techniques_stats() at 2011-10-10 15:56:46.
+Called init() to initiated the database-file at 2011-10-10 15:57:12.
+Called retrieve_techniques() at 2011-10-10 15:57:12.
+Called init() to initiated the database-file at 2011-10-10 16:01:13.
+Called retrieve_techniques() at 2011-10-10 16:01:13.
+Called init() to initiated the database-file at 2011-10-10 16:01:18.
+Called retrieve_techniques() at 2011-10-10 16:01:18.
+Called init() to initiated the database-file at 2011-10-10 16:02:15.
+Called init() to initiated the database-file at 2011-10-11 09:33:58.
+Called retrieve_techniques() at 2011-10-11 09:33:58.
+Called init() to initiated the database-file at 2011-10-11 09:35:01.
+Called retrieve_techniques() at 2011-10-11 09:35:01.
+Called init() to initiated the database-file at 2011-10-11 09:35:25.
+Called init() to initiated the database-file at 2011-10-11 09:35:45.
+Called retrieve_techniques() at 2011-10-11 09:35:45.
+Called init() to initiated the database-file at 2011-10-11 09:36:27.
+Called retrieve_techniques() at 2011-10-11 09:36:27.
+Called init() to initiated the database-file at 2011-10-11 09:37:00.
+Called retrieve_techniques() at 2011-10-11 09:37:00.
+Called init() to initiated the database-file at 2011-10-11 09:37:01.
+Called retrieve_techniques() at 2011-10-11 09:37:01.
+Called init() to initiated the database-file at 2011-10-11 09:37:13.
+Called retrieve_techniques() at 2011-10-11 09:37:13.
+Called init() to initiated the database-file at 2011-10-11 09:37:22.
+Called retrieve_techniques() at 2011-10-11 09:37:22.
+Called init() to initiated the database-file at 2011-10-11 09:37:30.
+Called retrieve_techniques() at 2011-10-11 09:37:30.
+Called init() to initiated the database-file at 2011-10-11 09:37:40.
+Called retrieve_techniques() at 2011-10-11 09:37:40.
+Called init() to initiated the database-file at 2011-10-11 09:38:37.
+Called retrieve_techniques() at 2011-10-11 09:38:37.
+Called init() to initiated the database-file at 2011-10-11 09:38:53.
+Called retrieve_techniques() at 2011-10-11 09:38:53.
+Called init() to initiated the database-file at 2011-10-11 09:39:11.
+Called retrieve_techniques() at 2011-10-11 09:39:11.
+Called init() to initiated the database-file at 2011-10-11 09:39:18.
+Called retrieve_techniques() at 2011-10-11 09:39:18.
+Called init() to initiated the database-file at 2011-10-11 09:39:20.
+Called retrieve_techniques() at 2011-10-11 09:39:20.
+Called init() to initiated the database-file at 2011-10-11 09:39:34.
+Called retrieve_techniques() at 2011-10-11 09:39:34.
+Called init() to initiated the database-file at 2011-10-11 09:39:35.
+Called retrieve_techniques() at 2011-10-11 09:39:35.
+Called init() to initiated the database-file at 2011-10-11 09:39:52.
+Called retrieve_techniques() at 2011-10-11 09:39:52.
+Called init() to initiated the database-file at 2011-10-11 09:40:26.
+Called retrieve_techniques() at 2011-10-11 09:40:26.
+Called retrieve_techniques_stats() at 2011-10-11 09:40:26.
+Called init() to initiated the database-file at 2011-10-11 09:40:27.
+Called init() to initiated the database-file at 2011-10-11 09:40:29.
+Called init() to initiated the database-file at 2011-10-11 09:41:43.
+Called init() to initiated the database-file at 2011-10-11 09:41:51.
+Called init() to initiated the database-file at 2011-10-11 09:41:56.
+Called init() to initiated the database-file at 2011-10-11 09:41:58.
+Called init() to initiated the database-file at 2011-10-11 09:42:30.
+Called init() to initiated the database-file at 2011-10-11 09:42:36.
+Called retrieve_techniques() at 2011-10-11 09:42:36.
+Called init() to initiated the database-file at 2011-10-11 09:42:38.
+Called retrieve_techniques() at 2011-10-11 09:42:38.
+Called retrieve_techniques_stats() at 2011-10-11 09:42:38.
+Called init() to initiated the database-file at 2011-10-11 09:42:39.
+Called init() to initiated the database-file at 2011-10-11 09:42:43.
+Called init() to initiated the database-file at 2011-10-11 09:42:58.
+Called init() to initiated the database-file at 2011-10-11 09:43:36.
+Called init() to initiated the database-file at 2011-10-11 09:44:08.
+Called init() to initiated the database-file at 2011-10-11 09:44:17.
+Called retrieve_projects() with argument(s) at 2011-10-11 09:44:17
+	 Argument(s): 
+		 Techniques: None 
+		 Search fields: ['project_name'] 
+		 Search string: None 
+		 Sorted by key: project_name 
+		 Shown as: asc
+Called init() to initiated the database-file at 2011-10-11 09:44:18.
+Called retrieve_projects() with argument(s) at 2011-10-11 09:44:18
+	 Argument(s): 
+		 Techniques: None 
+		 Search fields: ['project_no'] 
+		 Search string: None 
+		 Sorted by key: project_no 
+		 Shown as: asc
+Called init() to initiated the database-file at 2011-10-11 09:44:18.
+Called retrieve_projects() with argument(s) at 2011-10-11 09:44:18
+	 Argument(s): 
+		 Techniques: None 
+		 Search fields: ['lulz_had'] 
+		 Search string: None 
+		 Sorted by key: lulz_had 
+		 Shown as: asc
+Called init() to initiated the database-file at 2011-10-11 09:44:20.
+Called init() to initiated the database-file at 2011-10-11 09:46:15.
+Called init() to initiated the database-file at 2011-10-11 09:47:23.
+Called init() to initiated the database-file at 2011-10-11 09:47:26.
+Called init() to initiated the database-file at 2011-10-11 09:47:26.
+Called retrieve_techniques() at 2011-10-11 09:47:26.
+Called retrieve_techniques_stats() at 2011-10-11 09:47:26.
+Called init() to initiated the database-file at 2011-10-11 09:47:27.
+Called init() to initiated the database-file at 2011-10-11 09:47:32.
+Called retrieve_techniques() at 2011-10-11 09:47:32.
+Called retrieve_techniques_stats() at 2011-10-11 09:47:32.
+Called init() to initiated the database-file at 2011-10-11 09:47:34.
+Called init() to initiated the database-file at 2011-10-11 09:47:36.
+Called init() to initiated the database-file at 2011-10-11 09:48:32.
+Called retrieve_techniques() at 2011-10-11 09:48:32.
+Called retrieve_techniques_stats() at 2011-10-11 09:48:32.
+Called init() to initiated the database-file at 2011-10-11 09:48:41.
+Called retrieve_techniques() at 2011-10-11 09:48:41.
+Called retrieve_techniques_stats() at 2011-10-11 09:48:41.
+Called init() to initiated the database-file at 2011-10-11 09:48:52.
+Called retrieve_techniques() at 2011-10-11 09:48:52.
+Called retrieve_techniques_stats() at 2011-10-11 09:48:52.
+Called init() to initiated the database-file at 2011-10-11 09:51:17.
+Called retrieve_techniques() at 2011-10-11 09:51:17.
+Called retrieve_techniques_stats() at 2011-10-11 09:51:17.
+Called init() to initiated the database-file at 2011-10-11 09:52:13.
+Called retrieve_techniques() at 2011-10-11 09:52:13.
+Called retrieve_techniques_stats() at 2011-10-11 09:52:13.
+Called init() to initiated the database-file at 2011-10-11 09:52:28.
+Called retrieve_techniques() at 2011-10-11 09:52:28.
+Called retrieve_techniques_stats() at 2011-10-11 09:52:28.
+Called init() to initiated the database-file at 2011-10-11 09:52:29.
+Called retrieve_techniques() at 2011-10-11 09:52:29.
+Called retrieve_techniques_stats() at 2011-10-11 09:52:29.
+Called init() to initiated the database-file at 2011-10-11 09:52:42.
+Called retrieve_techniques() at 2011-10-11 09:52:42.
+Called retrieve_techniques_stats() at 2011-10-11 09:52:42.
+Called init() to initiated the database-file at 2011-10-11 09:52:50.
+Called retrieve_techniques() at 2011-10-11 09:52:50.
+Called retrieve_techniques_stats() at 2011-10-11 09:52:50.
+Called init() to initiated the database-file at 2011-10-11 09:52:54.
+Called retrieve_techniques() at 2011-10-11 09:52:54.
+Called retrieve_techniques_stats() at 2011-10-11 09:52:54.
+Called init() to initiated the database-file at 2011-10-11 09:52:56.
+Called retrieve_techniques() at 2011-10-11 09:52:56.
+Called retrieve_techniques_stats() at 2011-10-11 09:52:56.
+Called init() to initiated the database-file at 2011-10-11 09:53:00.
+Called retrieve_techniques() at 2011-10-11 09:53:00.
+Called retrieve_techniques_stats() at 2011-10-11 09:53:00.
+Called init() to initiated the database-file at 2011-10-11 09:53:35.
+Called retrieve_techniques() at 2011-10-11 09:53:35.
+Called retrieve_techniques_stats() at 2011-10-11 09:53:35.
+Called init() to initiated the database-file at 2011-10-11 09:53:37.
+Called retrieve_techniques() at 2011-10-11 09:53:37.
+Called retrieve_techniques_stats() at 2011-10-11 09:53:37.
+Called init() to initiated the database-file at 2011-10-11 09:53:43.
+Called retrieve_techniques() at 2011-10-11 09:53:43.
+Called retrieve_techniques_stats() at 2011-10-11 09:53:43.
+Called init() to initiated the database-file at 2011-10-11 09:53:49.
+Called retrieve_techniques() at 2011-10-11 09:53:49.
+Called retrieve_techniques_stats() at 2011-10-11 09:53:49.
+Called init() to initiated the database-file at 2011-10-11 09:53:51.
+Called retrieve_techniques() at 2011-10-11 09:53:51.
+Called retrieve_techniques_stats() at 2011-10-11 09:53:51.
+Called init() to initiated the database-file at 2011-10-11 09:53:55.
+Called retrieve_techniques() at 2011-10-11 09:53:55.
+Called retrieve_techniques_stats() at 2011-10-11 09:53:55.
+Called init() to initiated the database-file at 2011-10-11 09:54:06.
+Called retrieve_techniques() at 2011-10-11 09:54:06.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:06.
+Called init() to initiated the database-file at 2011-10-11 09:54:08.
+Called retrieve_techniques() at 2011-10-11 09:54:08.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:08.
+Called init() to initiated the database-file at 2011-10-11 09:54:12.
+Called retrieve_techniques() at 2011-10-11 09:54:12.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:12.
+Called init() to initiated the database-file at 2011-10-11 09:54:12.
+Called init() to initiated the database-file at 2011-10-11 09:54:14.
+Called retrieve_techniques() at 2011-10-11 09:54:14.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:14.
+Called init() to initiated the database-file at 2011-10-11 09:54:17.
+Called retrieve_techniques() at 2011-10-11 09:54:17.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:17.
+Called init() to initiated the database-file at 2011-10-11 09:54:19.
+Called retrieve_techniques() at 2011-10-11 09:54:19.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:19.
+Called init() to initiated the database-file at 2011-10-11 09:54:32.
+Called retrieve_techniques() at 2011-10-11 09:54:32.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:32.
+Called init() to initiated the database-file at 2011-10-11 09:54:37.
+Called retrieve_techniques() at 2011-10-11 09:54:37.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:37.
+Called init() to initiated the database-file at 2011-10-11 09:54:40.
+Called retrieve_techniques() at 2011-10-11 09:54:40.
+Called init() to initiated the database-file at 2011-10-11 09:54:45.
+Called retrieve_techniques() at 2011-10-11 09:54:45.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:45.
+Called init() to initiated the database-file at 2011-10-11 09:54:54.
+Called retrieve_techniques() at 2011-10-11 09:54:54.
+Called retrieve_techniques_stats() at 2011-10-11 09:54:54.
+Called init() to initiated the database-file at 2011-10-11 09:56:44.
+Called retrieve_techniques() at 2011-10-11 09:56:44.
+Called retrieve_techniques_stats() at 2011-10-11 09:56:44.
+Called init() to initiated the database-file at 2011-10-11 09:56:48.
+Called init() to initiated the database-file at 2011-10-11 09:57:00.
+Called init() to initiated the database-file at 2011-10-11 09:57:28.
+Called init() to initiated the database-file at 2011-10-11 09:57:32.
+Called init() to initiated the database-file at 2011-10-11 09:57:53.
+Called init() to initiated the database-file at 2011-10-11 09:58:02.
+Called init() to initiated the database-file at 2011-10-11 09:58:15.
+Called init() to initiated the database-file at 2011-10-11 09:58:34.
+Called init() to initiated the database-file at 2011-10-11 09:58:50.
+Called init() to initiated the database-file at 2011-10-11 09:58:58.
+Called init() to initiated the database-file at 2011-10-11 09:59:13.
+Called init() to initiated the database-file at 2011-10-11 09:59:24.
+Called init() to initiated the database-file at 2011-10-11 09:59:35.
+Called init() to initiated the database-file at 2011-10-11 09:59:40.
+Called init() to initiated the database-file at 2011-10-11 09:59:47.
+Called init() to initiated the database-file at 2011-10-11 10:00:07.
+Called retrieve_techniques() at 2011-10-11 10:00:07.
+Called retrieve_techniques_stats() at 2011-10-11 10:00:07.
+Called init() to initiated the database-file at 2011-10-11 10:00:08.
+Called retrieve_techniques() at 2011-10-11 10:00:08.
+Called init() to initiated the database-file at 2011-10-11 10:00:55.
+Called retrieve_techniques() at 2011-10-11 10:00:55.
+Called init() to initiated the database-file at 2011-10-11 10:01:12.
+Called retrieve_techniques() at 2011-10-11 10:01:12.
+Called init() to initiated the database-file at 2011-10-11 10:01:22.
+Called retrieve_techniques() at 2011-10-11 10:01:22.
+Called retrieve_projects() with argument(s) at 2011-10-11 10:01:22
+	 Argument(s): 
+		 Techniques: None 
+		 Search fields: [u'big_image'] 
+		 Search string: xxx 
+		 Sorted by key: start_date 
+		 Shown as: asc
+Called init() to initiated the database-file at 2011-10-11 10:01:28.
+Called retrieve_techniques() at 2011-10-11 10:01:28.
+Called retrieve_projects() with argument(s) at 2011-10-11 10:01:28
+	 Argument(s): 
+		 Techniques: None 
+		 Search fields: [u'project_name'] 
+		 Search string: 2077 
+		 Sorted by key: start_date 
+		 Shown as: asc
+Called init() to initiated the database-file at 2011-10-11 10:01:32.
+Called retrieve_techniques() at 2011-10-11 10:01:32.
+Called retrieve_projects() with argument(s) at 2011-10-11 10:01:32
+	 Argument(s): 
+		 Techniques: None 
+		 Search fields: [u'project_name'] 
+		 Search string: 2007 
+		 Sorted by key: start_date 
+		 Shown as: asc
+Called init() to initiated the database-file at 2011-10-11 10:01:34.
+Called lookup_project(id) with id: 2 at 2011-10-11 10:01:34.
+Called lookup_project(id) with id: 2 at 2011-10-11 10:01:34.
+Called init() to initiated the database-file at 2011-10-11 10:01:36.
+Called retrieve_techniques() at 2011-10-11 10:01:36.
+Called init() to initiated the database-file at 2011-10-11 10:02:53.
+Called retrieve_techniques() at 2011-10-11 10:02:53.
+Called init() to initiated the database-file at 2011-10-11 10:03:06.
+Called retrieve_techniques() at 2011-10-11 10:03:06.
+Called init() to initiated the database-file at 2011-10-11 10:03:27.
+Called retrieve_techniques() at 2011-10-11 10:03:27.
+Called init() to initiated the database-file at 2011-10-11 10:03:37.
+Called retrieve_techniques() at 2011-10-11 10:03:37.
+Called init() to initiated the database-file at 2011-10-11 10:04:27.
+Called retrieve_techniques() at 2011-10-11 10:04:27.
+Called init() to initiated the database-file at 2011-10-11 10:04:56.
+Called retrieve_techniques() at 2011-10-11 10:04:56.
+Called init() to initiated the database-file at 2011-10-11 10:05:03.
+Called retrieve_techniques() at 2011-10-11 10:05:03.
+Called init() to initiated the database-file at 2011-10-11 10:05:13.
+Called retrieve_techniques() at 2011-10-11 10:05:13.
+Called init() to initiated the database-file at 2011-10-11 10:06:50.
+Called retrieve_techniques() at 2011-10-11 10:06:50.
+Called init() to initiated the database-file at 2011-10-11 10:07:15.
+Called retrieve_techniques() at 2011-10-11 10:07:15.
+Called init() to initiated the database-file at 2011-10-11 10:07:39.
+Called retrieve_techniques() at 2011-10-11 10:07:39.
+Called init() to initiated the database-file at 2011-10-11 10:07:49.
+Called retrieve_techniques() at 2011-10-11 10:07:49.
+Called init() to initiated the database-file at 2011-10-11 10:07:52.
+Called retrieve_techniques() at 2011-10-11 10:07:52.
+Called init() to initiated the database-file at 2011-10-11 10:07:56.
+Called retrieve_techniques() at 2011-10-11 10:07:56.
+Called init() to initiated the database-file at 2011-10-11 10:08:23.
+Called retrieve_techniques() at 2011-10-11 10:08:23.
+Called init() to initiated the database-file at 2011-10-11 10:08:45.
+Called retrieve_techniques() at 2011-10-11 10:08:45.
+Called init() to initiated the database-file at 2011-10-11 10:09:21.
+Called retrieve_techniques() at 2011-10-11 10:09:21.
+Called init() to initiated the database-file at 2011-10-11 10:09:24.
+Called retrieve_techniques() at 2011-10-11 10:09:24.
+Called init() to initiated the database-file at 2011-10-11 10:09:33.
+Called retrieve_techniques() at 2011-10-11 10:09:33.
+Called init() to initiated the database-file at 2011-10-11 10:09:53.
+Called retrieve_techniques() at 2011-10-11 10:09:53.
+Called init() to initiated the database-file at 2011-10-11 10:09:57.
+Called retrieve_techniques() at 2011-10-11 10:09:57.
+Called init() to initiated the database-file at 2011-10-11 10:10:00.
+Called retrieve_techniques() at 2011-10-11 10:10:00.
+Called init() to initiated the database-file at 2011-10-11 10:10:31.
+Called retrieve_techniques() at 2011-10-11 10:10:31.
+Called init() to initiated the database-file at 2011-10-11 10:10:46.
+Called retrieve_techniques() at 2011-10-11 10:10:46.
+Called init() to initiated the database-file at 2011-10-11 10:11:15.
+Called retrieve_techniques() at 2011-10-11 10:11:15.
+Called init() to initiated the database-file at 2011-10-11 10:11:20.
+Called retrieve_techniques() at 2011-10-11 10:11:20.
+Called init() to initiated the database-file at 2011-10-11 10:11:23.
+Called retrieve_techniques() at 2011-10-11 10:11:23.
+Called init() to initiated the database-file at 2011-10-11 10:11:41.
+Called retrieve_techniques() at 2011-10-11 10:11:41.
+Called init() to initiated the database-file at 2011-10-11 10:12:05.
+Called retrieve_techniques() at 2011-10-11 10:12:05.
+Called retrieve_techniques_stats() at 2011-10-11 10:12:05.
+Called init() to initiated the database-file at 2011-10-11 10:12:07.
+Called retrieve_techniques() at 2011-10-11 10:12:07.
+Called retrieve_techniques_stats() at 2011-10-11 10:12:07.
+Called init() to initiated the database-file at 2011-10-11 10:12:15.
+Called retrieve_techniques() at 2011-10-11 10:12:15.
+Called retrieve_techniques_stats() at 2011-10-11 10:12:15.
+Called init() to initiated the database-file at 2011-10-11 10:12:18.
+Called lookup_project(id) with id: 3 at 2011-10-11 10:12:18.
+Called lookup_project(id) with id: 3 at 2011-10-11 10:12:18.
+Called init() to initiated the database-file at 2011-10-11 10:12:20.
+Called retrieve_techniques() at 2011-10-11 10:12:20.
+Called retrieve_techniques_stats() at 2011-10-11 10:12:20.
+Called init() to initiated the database-file at 2011-10-11 10:13:38.
+Called init() to initiated the database-file at 2011-10-11 10:13:39.
+Called retrieve_techniques() at 2011-10-11 10:13:39.
+Called retrieve_techniques_stats() at 2011-10-11 10:13:39.
+Called init() to initiated the database-file at 2011-10-11 10:13:41.
+Called retrieve_techniques() at 2011-10-11 10:13:41.
+Called init() to initiated the database-file at 2011-10-11 10:13:46.

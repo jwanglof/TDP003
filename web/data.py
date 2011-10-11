@@ -168,7 +168,7 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
                         _new_list.append(row)
         else:
             # Que?
-            _error_code = 0
+            _error_code = 1
     else:
         _new_list = _list[:]
     # End of "check what to look for"
