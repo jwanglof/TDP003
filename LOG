@@ -326,3 +326,179 @@ Called retrieve_techniques_stats() at 2011-10-11 10:13:39.
 Called init() to initiated the database-file at 2011-10-11 10:13:41.
 Called retrieve_techniques() at 2011-10-11 10:13:41.
 Called init() to initiated the database-file at 2011-10-11 10:13:46.
+Called init() to initiated the database-file at 2011-10-11 10:17:42.
+Called init() to initiated the database-file at 2011-10-11 10:49:39.
+Called retrieve_techniques() at 2011-10-11 10:49:39.
+Called init() to initiated the database-file at 2011-10-11 10:57:30.
+Called retrieve_techniques() at 2011-10-11 10:57:30.
+Called retrieve_techniques_stats() at 2011-10-11 10:57:30.
+Called init() to initiated the database-file at 2011-10-11 10:57:31.
+Called retrieve_techniques() at 2011-10-11 10:57:31.
+Called retrieve_techniques_stats() at 2011-10-11 10:57:31.
+Called init() to initiated the database-file at 2011-10-11 11:01:42.
+Called init() to initiated the database-file at 2011-10-11 11:02:01.
+Called init() to initiated the database-file at 2011-10-11 11:02:14.
+Called init() to initiated the database-file at 2011-10-11 11:03:19.
+Called init() to initiated the database-file at 2011-10-11 11:06:03.
+Called init() to initiated the database-file at 2011-10-11 11:06:06.
+Called init() to initiated the database-file at 2011-10-11 11:06:07.
+Called init() to initiated the database-file at 2011-10-11 11:06:53.
+Called init() to initiated the database-file at 2011-10-11 11:07:11.
+Called init() to initiated the database-file at 2011-10-11 11:07:16.
+Called init() to initiated the database-file at 2011-10-11 11:07:31.
+Called init() to initiated the database-file at 2011-10-11 11:07:37.
+Called init() to initiated the database-file at 2011-10-11 11:07:54.
+Called init() to initiated the database-file at 2011-10-11 11:08:00.
+Called init() to initiated the database-file at 2011-10-11 11:08:34.
+Called init() to initiated the database-file at 2011-10-11 11:09:50.
+Called init() to initiated the database-file at 2011-10-11 11:10:01.
+Called init() to initiated the database-file at 2011-10-11 11:10:05.
+Called init() to initiated the database-file at 2011-10-11 11:10:29.
+Called init() to initiated the database-file at 2011-10-11 11:12:26.
+Called init() to initiated the database-file at 2011-10-11 11:13:03.
+Called init() to initiated the database-file at 2011-10-11 11:13:23.
+Called init() to initiated the database-file at 2011-10-11 11:13:58.
+Called init() to initiated the database-file at 2011-10-11 11:15:16.
+Called init() to initiated the database-file at 2011-10-11 11:16:37.
+Called init() to initiated the database-file at 2011-10-11 11:17:16.
+Called init() to initiated the database-file at 2011-10-11 11:17:24.
+Called init() to initiated the database-file at 2011-10-11 11:17:25.
+Called init() to initiated the database-file at 2011-10-11 11:17:27.
+Called init() to initiated the database-file at 2011-10-11 11:17:48.
+Called init() to initiated the database-file at 2011-10-11 11:17:59.
+Called init() to initiated the database-file at 2011-10-11 11:18:00.
+Called init() to initiated the database-file at 2011-10-11 11:19:19.
+Called init() to initiated the database-file at 2011-10-11 11:19:21.
+Called init() to initiated the database-file at 2011-10-11 11:19:34.
+Called init() to initiated the database-file at 2011-10-11 11:19:49.
+Called init() to initiated the database-file at 2011-10-11 11:19:52.
+Called init() to initiated the database-file at 2011-10-11 11:20:08.
+Called init() to initiated the database-file at 2011-10-11 11:20:09.
+Called init() to initiated the database-file at 2011-10-11 11:21:11.
+Called init() to initiated the database-file at 2011-10-11 11:21:11.
+Called init() to initiated the database-file at 2011-10-11 11:21:17.
+Called init() to initiated the database-file at 2011-10-11 11:22:43.
+Called lookup_project(id) with id: 1 at 2011-10-11 11:22:43.
+Called init() to initiated the database-file at 2011-10-11 11:22:45.
+Called init() to initiated the database-file at 2011-10-11 11:22:46.
+Called init() to initiated the database-file at 2011-10-11 11:22:48.
+Called lookup_project(id) with id: 1 at 2011-10-11 11:22:48.
+Called init() to initiated the database-file at 2011-10-11 11:23:21.
+Called lookup_project(id) with id: 1 at 2011-10-11 11:23:21.
+Called init() to initiated the database-file at 2011-10-11 11:23:24.
+Called init() to initiated the database-file at 2011-10-11 11:23:25.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:23:25.
+Called init() to initiated the database-file at 2011-10-11 11:25:07.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:25:07.
+Called init() to initiated the database-file at 2011-10-11 11:25:24.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:25:24.
+Called init() to initiated the database-file at 2011-10-11 11:25:37.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:25:37.
+Called init() to initiated the database-file at 2011-10-11 11:25:45.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:25:45.
+Called init() to initiated the database-file at 2011-10-11 11:25:55.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:25:55.
+Called init() to initiated the database-file at 2011-10-11 11:25:56.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:25:56.
+Called init() to initiated the database-file at 2011-10-11 11:26:05.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:26:05.
+Called init() to initiated the database-file at 2011-10-11 11:27:29.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:27:29.
+Called init() to initiated the database-file at 2011-10-11 11:27:39.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:27:39.
+Called init() to initiated the database-file at 2011-10-11 11:27:58.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:27:58.
+Called init() to initiated the database-file at 2011-10-11 11:28:08.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:28:08.
+Called init() to initiated the database-file at 2011-10-11 11:28:45.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:28:45.
+Called init() to initiated the database-file at 2011-10-11 11:28:54.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:28:54.
+Called init() to initiated the database-file at 2011-10-11 11:28:59.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:28:59.
+Called init() to initiated the database-file at 2011-10-11 11:30:14.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:30:14.
+Called init() to initiated the database-file at 2011-10-11 11:30:24.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:30:24.
+Called init() to initiated the database-file at 2011-10-11 11:30:28.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:30:28.
+Called init() to initiated the database-file at 2011-10-11 11:30:39.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:30:39.
+Called init() to initiated the database-file at 2011-10-11 11:30:48.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:30:48.
+Called init() to initiated the database-file at 2011-10-11 11:30:53.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:30:53.
+Called init() to initiated the database-file at 2011-10-11 11:31:26.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:31:26.
+Called init() to initiated the database-file at 2011-10-11 11:31:45.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:31:45.
+Called init() to initiated the database-file at 2011-10-11 11:31:58.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:31:58.
+Called init() to initiated the database-file at 2011-10-11 11:32:06.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:06.
+Called init() to initiated the database-file at 2011-10-11 11:32:17.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:17.
+Called init() to initiated the database-file at 2011-10-11 11:32:23.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:23.
+Called init() to initiated the database-file at 2011-10-11 11:32:26.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:26.
+Called init() to initiated the database-file at 2011-10-11 11:32:36.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:36.
+Called init() to initiated the database-file at 2011-10-11 11:32:41.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:41.
+Called init() to initiated the database-file at 2011-10-11 11:32:49.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:49.
+Called init() to initiated the database-file at 2011-10-11 11:32:53.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:32:53.
+Called init() to initiated the database-file at 2011-10-11 11:33:26.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:33:26.
+Called init() to initiated the database-file at 2011-10-11 11:33:50.
+Called lookup_project(id) with id: 2 at 2011-10-11 11:33:50.
+Called init() to initiated the database-file at 2011-10-11 11:33:57.
+Called init() to initiated the database-file at 2011-10-11 11:33:58.
+Called lookup_project(id) with id: 3 at 2011-10-11 11:33:58.
+Called init() to initiated the database-file at 2011-10-11 11:34:07.
+Called lookup_project(id) with id: 3 at 2011-10-11 11:34:07.
+Called init() to initiated the database-file at 2011-10-11 11:35:45.
+Called lookup_project(id) with id: 3 at 2011-10-11 11:35:45.
+Called init() to initiated the database-file at 2011-10-11 11:37:09.
+Called lookup_project(id) with id: 3 at 2011-10-11 11:37:09.
+Called init() to initiated the database-file at 2011-10-11 11:38:10.
+Called lookup_project(id) with id: 3 at 2011-10-11 11:38:10.
+Called init() to initiated the database-file at 2011-10-11 11:38:21.
+Called lookup_project(id) with id: 3 at 2011-10-11 11:38:21.
+Called init() to initiated the database-file at 2011-10-11 11:40:20.
+Called lookup_project(id) with id: 3 at 2011-10-11 11:40:20.
+Called init() to initiated the database-file at 2011-10-11 12:38:50.
+Called init() to initiated the database-file at 2011-10-11 12:39:17.
+Called init() to initiated the database-file at 2011-10-11 12:39:57.
+Called init() to initiated the database-file at 2011-10-11 12:40:29.
+Called init() to initiated the database-file at 2011-10-11 12:40:34.
+Called init() to initiated the database-file at 2011-10-11 12:40:43.
+Called init() to initiated the database-file at 2011-10-11 12:40:57.
+Called init() to initiated the database-file at 2011-10-11 12:41:23.
+Called init() to initiated the database-file at 2011-10-11 12:41:52.
+Called init() to initiated the database-file at 2011-10-11 12:42:08.
+Called retrieve_techniques() at 2011-10-11 12:42:08.
+Called retrieve_techniques_stats() at 2011-10-11 12:42:08.
+Called init() to initiated the database-file at 2011-10-11 12:44:21.
+Called retrieve_techniques() at 2011-10-11 12:44:21.
+Called init() to initiated the database-file at 2011-10-11 12:44:22.
+Called init() to initiated the database-file at 2011-10-11 12:44:23.
+Called retrieve_techniques() at 2011-10-11 12:44:23.
+Called retrieve_techniques_stats() at 2011-10-11 12:44:23.
+Called init() to initiated the database-file at 2011-10-11 12:44:32.
+Called retrieve_techniques() at 2011-10-11 12:44:32.
+Called retrieve_techniques_stats() at 2011-10-11 12:44:32.
+Called init() to initiated the database-file at 2011-10-11 12:44:34.
+Called init() to initiated the database-file at 2011-10-11 12:44:35.
+Called retrieve_techniques() at 2011-10-11 12:44:35.
+Called retrieve_techniques_stats() at 2011-10-11 12:44:35.
+Called init() to initiated the database-file at 2011-10-11 12:44:36.
+Called retrieve_techniques() at 2011-10-11 12:44:36.
+Called init() to initiated the database-file at 2011-10-11 12:44:37.
+Called init() to initiated the database-file at 2011-10-11 12:44:39.
+Called lookup_project(id) with id: 1 at 2011-10-11 12:44:39.
+Called init() to initiated the database-file at 2011-10-11 12:45:13.
+Called retrieve_techniques() at 2011-10-11 12:45:13.
+Called retrieve_techniques_stats() at 2011-10-11 12:45:13.

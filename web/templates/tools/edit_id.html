@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   <div class="edit">
+   <form method="post" action="{{ url_for("tools", tool="edit_id") }}">
+	 {% for i in keys %}
+	    <div class="text">{{ i.replace("_", " ").title() }}</div>
+	    <input type="text" name="{{ i }}" value="{{ data[i] }}" />
+	    <br />
+	 {% endfor %}
+	 <input type="submit" value="Edit '{{ data["project_name"] }}'" />
+   </form>
+   </div>
+{% endblock %}
+
+<!--
+    If it loops out the techniques it will put it in different inputs.
+    Don't know if I should use it.
+	    {% if i == "techniques_used" %}
+	       {% for o in data[i] %}
+	          <input type="text" name="{{ i }}" value="{{ o }}" />
+	       {% endfor %}
+	    {% else %}
+	       <input type="text" name="{{ i }}" value="{{ data[i] }}" />
+	    {% endif %}
+--->

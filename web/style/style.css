@@ -12,9 +12,9 @@ h1 {
 
 #nav {
     border-bottom: 2px solid #e6e6e6;
-    width: 100%;
+    width: 98%;
 
-    margin: 0em;
+    margin: 0 auto;
 
     font-family: "Georgia", serif;
     font-size: 1.2em;
@@ -179,4 +179,14 @@ h1 {
 
 .search_block .search {
     width: 20em;
+}
+
+.edit .text {
+    width: 10em;
+    float: left;
+}
+
+.edit input[type="text"] {
+    width: 20em;
+
 }

@@ -10,6 +10,12 @@
     <a href="/list">/list</a>
     <a href="/techniques">/techniques</a>
     <a href="/search">/search</a>
+    {% if not session.sess_admin %}
+       <a href="/login">/login</a>
+    {% else %}
+       <a href="/admin">/admin</a>
+    {% endif %}
+    <div style="float: right; word-spacing: 0em;">Error: {{ data_error }}</div>
   </div>
   <div id="content">
     <div id="lefty">

@@ -5,7 +5,17 @@
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Response
 import data
 
+# Configuration
+DEBUG = True
+SECRET_KEY = "flaskrtdp003"
+USERNAME = "tdp003"
+PASSWORD = "tdp0033"
+
 app = Flask(__name__)
+app.config.from_object(__name__)
+
+# Change to True when the site is live
+#app.config.from_envvar('../FLASKR_SETTINGS', silent=False)
 
 # Add a route for the /style-folder so flask know where to look for the css-file(s)
 @app.route("/style/<filename>")
@@ -47,8 +57,8 @@ def page_list():
         _data = data._data
         _highlight = None
 
-#error=data._error_meaning[data._error_code]
-    return render_template("list.html", _db_data=_data, _form_highlight = _highlight)
+    data_error = data._error_meaning[data._error_code]
+    return render_template("list.html", _db_data=_data, _form_highlight = _highlight,data_error=data_error)
 
 @app.route("/project/<id>")
 def page_project(id):
@@ -58,21 +68,26 @@ def page_project(id):
 
     if _error > 0:
         _project = ""
-        _error = data._error_meaning[_error]
+#        _error = data._error_meaning[_error]
 
-    return render_template("project.html", _db_data=_project, _error=_error)
+    data_error = data._error_meaning[data._error_code]
+    return render_template("project.html", _db_data=_project, data_error=data_error)
 
 @app.route("/techniques")
 def page_techs():
     data.init()
     _techs = data.retrieve_technique_stats()[1]
-    return render_template("techniques.html", _db_data=data._data, _techniques = _techs)
+
+    data_error = data._error_meaning[data._error_code]
+    return render_template("techniques.html", _db_data=data._data, _techniques = _techs, data_error=data_error)
 
 @app.route("/technique/<tech>")
 def page_tech(tech):
     data.init()
     _techs = data.retrieve_technique_stats()[1]
-    return render_template("technique.html", _db_data=data._data, _techniques = _techs,_tech=tech)
+
+    data_error = data._error_meaning[data._error_code]
+    return render_template("technique.html", _db_data=data._data, _techniques = _techs,_tech=tech, data_error=data_error)
 
 @app.route("/search", methods=["GET", "POST"])
 def page_search():
@@ -96,7 +111,51 @@ def page_search():
         else:
             error = "You must specify at least one category to search in!"
 
-    return render_template("search.html", _search_result = sstring, keys=keys, techs=techs, error=error)
+    data_error = data._error_meaning[data._error_code]
+    return render_template("search.html", _search_result = sstring, keys=keys, techs=techs, error=error, data_error=data_error)
+
+@app.route("/admin")
+def page_admin():
+    data.init()
+
+    data_error = data._error_meaning[data._error_code]
+    return render_template("admin.html", data=data._data, data_error=data_error)
+
+@app.route("/tools/<path:tool>", methods=["GET", "POST"])
+def tools(tool):
+    data.init()
+    s_id = None
+    keys = None
+    if tool == "edit":
+        page = "edit.html"
+        _data = data._data
+    elif tool == "submit":
+        page = "test.html"
+        _data = data._data
+    elif tool[0:7] == "edit_id":
+        page = "edit_id.html"
+        _data = data.lookup_project(tool[8:10])[1]
+        s_id = tool[8:10]
+        keys = data._data[0].keys()
+    # Don't need tool, just for dev
+    return render_template("tools/" + page, data=_data,tool=tool,s_id=s_id,keys=keys)
+
+@app.route("/login", methods=["GET", "POST"])
+def page_login():
+    error = None
+    login = None
+    if request.method == "POST":
+        if request.form["username"] != app.config["USERNAME"]:
+            error = "Invalid Username."
+        elif request.form["password"] != app.config["PASSWORD"]:
+            error = "Invalid Password."
+        else:
+            session["sess_admin"] = True
+            flash("You were logged in.")
+            return redirect(url_for("page_admin"))
+    elif session["sess_admin"]:
+        login = True
+    return render_template("login.html", error=error,login=login)
 
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   <form method="post" action="{{ url_for("tools", tool="submit") }}">
+     {% for i in data %}
+        <input type="text" name="{{ i["project_no"] }}" value="{{ i }}" style="width: 100em;"/>
+     {% endfor %}
+     <input type="submit" value="Edit" />
+   </form>
+{% endblock %}

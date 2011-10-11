@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+{% if login %}
+   <strong>You are already logged in.</strong>
+{% else %}
+   {% if error %} <strong>Error:</strong> {{ error }} {% endif %}
+   <form method="post" action="{{ url_for("page_login") }}">
+     <input type="text" name="username" placeholder="Username..." />
+     <br />
+     <input type="password" name="password" placeholder="Password..." />
+     <br />
+     <input type="submit" value="Log in" />
+   </form>
+{% endif %}
+{% endblock %}

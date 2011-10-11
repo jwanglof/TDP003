@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block content %}
+   <a href="/tools/edit">Edit CSV-file</a>
+   <p>
+   {% for i in data %}
+      <a href="/tools/edit_id/{{ i["project_no"] }}">{{ i["project_name"] }}</a>
+      <br />
+   {% endfor %}
+   </p>
+{% endblock %}
