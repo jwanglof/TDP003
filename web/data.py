@@ -64,11 +64,11 @@ def init():
 
         _error_code = 0
 #        print _data
-        _log.append("Called init() to initiated the database-file at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
+        _log.append("Called init() to initiated the database-file at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ".\n")
 
     except IOError:
         _error_code = 1
-        _log.append("Failed to initate the database-file with init() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code " + _error_code + ".\n")
+        _log.append("Failed to initate the database-file with init() at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ". Error-code " + str(_error_code) + ".\n")
 
     # Calls the log-function so everything in _log is written to the log-file
     log()
@@ -81,9 +81,9 @@ def project_count():
 
     if _error_code == 0:
         _error_code = 0
-        _log.append("Called project_count() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
+        _log.append("Called project_count() at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ".\n")
     else:
-        _log.append("Failed to call project_count() at " + time.strftime("%Y-%m-%d %H:%M:%S") + "Error-code: " + _error_code + "\n")
+        _log.append("Failed to call project_count() at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + "Error-code: " + str(_error_code) + "\n")
     log()
 
     return (_error_code, len(_data))
@@ -103,9 +103,9 @@ def lookup_project(id):
     if len(_proj) == 0:
         _error_code = 2
         _proj = None
-        _log.append("Failed to call lookup_project(id) with id:" + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code: " + _error_code + "\n")
+        _log.append("Failed to call lookup_project(id) with id:" + str(id) + " at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ". Error-code: " + str(_error_code) + "\n")
     else:
-        _log.append("Called lookup_project(id) with id: " + id + " at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
+        _log.append("Called lookup_project(id) with id: " + str(id) + " at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ".\n")
 
     log()
 
@@ -186,10 +186,10 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
 
     # Checks to see if any criteriums have been specified
     if _techs is None and _fields is None and search is None:
-        _log.append("Called retrieve_projects() without any arguments. Returned all the data from the CSV-database file at " + time.strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        _log.append("Called retrieve_projects() without any arguments. Returned all the data from the CSV-database file at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + "\n")
         _new_list = _data
     else:
-        _log.append("Called retrieve_projects() with argument(s) at " + time.strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        _log.append("Called retrieve_projects() with argument(s) at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + "\n")
         _log.append("\t Argument(s): \n\t\t Techniques: " + str(_techs) + " \n\t\t Search fields: " + str(_fields) + " \n\t\t Search string: " + str(search) + " \n\t\t Sorted by key: " + str(sort_by) + " \n\t\t Shown as: " + str(sort_order) + "\n")
 
     log()
@@ -210,7 +210,7 @@ def retrieve_techniques():
         if items not in _new_list:
             _new_list.append(items)
 
-    _log.append("Called retrieve_techniques() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
+    _log.append("Called retrieve_techniques() at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ".\n")
     log()
     _error_code = 0
 
@@ -240,10 +240,10 @@ def retrieve_technique_stats():
 
     if len(_list) > 0:
         _error_code = 0
-        _log.append("Called retrieve_techniques_stats() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
+        _log.append("Called retrieve_techniques_stats() at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ".\n")
     else:
         _error_code = 1
-        _log.append("Failed to call retrieve_techniques_stats() at " + time.strftime("%Y-%m-%d %H:%M:%S") + ". Error-code: " + _error_code + "\n")
+        _log.append("Failed to call retrieve_techniques_stats() at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ". Error-code: " + str(_error_code) + "\n")
 
     log()
     return (_error_code, _list)
