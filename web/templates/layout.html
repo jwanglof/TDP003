@@ -1,8 +1,204 @@
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+  <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
   <title>Portfolio by Johan and Simon</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for("css", filename="style.css") }}" />
-  <link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css'>
+<!--  <link href="{{ url_for("css", filename="style.css") }}" rel="stylesheet" type="text/css" /> -->
+  <link href='http://fonts.googleapis.com/css?family=Antic' rel='stylesheet' type='text/css' />
+  <style type="text/css">
+    body {
+    background-color: #c0c0c0;
+    margin: 0em; padding: 0em;
+    font-family: "Antic", sans-serif;
+}
+
+h1 {
+    color: #377ba8;
+    font-family: "Georgia", serif;
+    margin: 0em;
+}
+
+#nav {
+    border-bottom: 2px solid #e6e6e6;
+    width: 98%;
+
+    margin: 0 auto;
+
+    font-family: "Georgia", serif;
+    font-size: 1.2em;
+    word-spacing: 3em;
+    
+    padding-left: 1em;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #000000;
+}
+
+#nav a:hover {
+    text-decoration: underline;
+}
+
+#nav a:visited {
+    color: #000000;
+}
+
+#subnav {
+    background-color: #c09898;
+    border-bottom: 1px solid #c0a5a5;
+    height: 10em;
+}
+
+#content {
+    padding: 0.5em;
+    border: 0px solid #000000;
+    clear: both;
+}
+
+#content #lefty {
+    float: left;
+    border: 0px solid #000000;
+    width: 75%;
+}
+
+#content #righty {
+    float: right;
+    width: 25%;
+}
+
+.list {
+    width: 100%;
+}
+
+.list img {
+    float: left;
+    height: 150px;
+    width: 150px;
+    border: 1px solid #377ba8;
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+}
+
+.list .summary {
+    
+}
+
+.list .summary a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+.list .summary a:hover {
+    text-decoration: underline;
+}
+
+.list .summary a:active {
+    color: #000000;
+}
+
+.list .summary a:visited {
+    color: #ffffff;
+}
+
+.list .container {
+    clear: both;
+}
+
+.list .links {
+}
+
+.project_container {
+
+}
+
+.project_container img {
+    float: left;
+    height: 350px;
+    width: 550px;
+    border: 1px solid #377ba8;
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+}
+
+.project_container .about {
+    float: left;
+}
+
+#subnav h3 {
+    color: #377ba8;
+    font-family: "Georgia", serif;
+    font-size: 2em;
+    margin: 0em;
+    display: block;
+}
+
+#subnav {
+    padding: 0.5em;
+}
+
+#subnav .search {
+    margin-left: 0.5em;
+}
+
+.sort_form input[type="submit"] {
+    border: 1px solid #000000;
+    width: 10em;
+}
+
+.highlight {
+    background-color: #c0c0c0;
+}
+
+.techniques h3 a {
+    font-size: 1.3em;
+    margin: 1em 0em 0em 0em; padding: 0em;
+    color: #377ba8;
+    text-decoration: none;
+}
+
+.techniques h3 a:hover {
+    text-decoration: underline;
+}
+
+.techniques h4 {
+    font-size: 0.8em;
+    margin: 0em; padding: 0em;
+}
+
+.techniques .container {
+    padding: 0em 0em 0em 1em;
+}
+
+.techniques .projects {
+    padding: 0em 0em 0em 1em;
+}
+
+.search_block {
+    display: block;
+    margin-bottom: 0.6em;
+}
+
+.search_block .category {
+    display: block;
+}
+
+.search_block .search {
+    width: 20em;
+}
+
+.edit .text {
+    width: 10em;
+    float: left;
+}
+
+.edit input[type="text"] {
+    width: 20em;
+
+}
+  </style>
 </head>
 <body>
   <div id="nav">
@@ -20,10 +216,10 @@
   </div>
   <div id="content">
     <div id="lefty">
-    {% block content %}{% endblock %}
+      {% block content %}{% endblock %}
     </div>
     <div id="righty">
-          {% block subnav %}{% endblock %}
+      {% block subnav %}{% endblock %}
     </div>
   </div>
 
