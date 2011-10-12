@@ -46,6 +46,7 @@ def init():
                         field[fieldName] = None
                     else:
                         field[fieldName] = unicode(row[index], "utf-8")
+#unicode(row[index].encode("utf-8", "ignore"), "utf-8")
                 else:
                     if len(row[index]) > 1:
                         field[fieldName] = str(row[index])
@@ -62,7 +63,7 @@ def init():
                 row["techniques_used"] = []
 
         _error_code = 0
-
+#        print _data
         _log.append("Called init() to initiated the database-file at " + time.strftime("%Y-%m-%d %H:%M:%S") + ".\n")
 
     except IOError:
@@ -246,6 +247,68 @@ def retrieve_technique_stats():
 
     log()
     return (_error_code, _list)
+
+# This is suppose to edit the CSV-file. It works to edit in _data but I can't figure out how to write it to the CSV file with the fieldnames. Don't need it for the project so I will not continue on this, for now.
+'''
+def edit_project(id,values):
+    _error_code = 0
+    init()
+    if isinstance(values, dict):
+        #Works but I think I need to edit in _data directly when looping it
+#        u = [y for y in _data if y["project_no"] == id][0]
+#        for i in values:
+#            print i
+#            print values[i]
+        for i in _data:
+            for o in values:
+                if i["project_no"] == id:
+                    if isinstance(values[o], str):
+                        i[o] = unicode(values[o], "utf-8", errors="ignore")
+                    else:
+                        i[o] = values[o]
+                    
+                    if values["techniques_used"] and values["techniques_used"] != None:
+                        i[o] = i["techniques_used"].split(",")
+                    else:
+                        i[o] = []
+
+        # Write everything to the CSV-file
+        fieldnames = csv.reader(open("data2.csv", "r")).next()
+        csv_writer("data2.csv", _data, fieldnames)
+
+    else:
+        _error_code = 1
+        error = "Values need to be in a dictionary."
+
+    return (_error_code)
+
+# Doesn't work with the fieldnames....
+# DOES NOT WORK!!!!!!!!!!!!!!!
+def csv_writer(csvfile22, values, fieldnames):
+    f = open(csvfile22, "wb")
+    writer = csv.DictWriter(f, fieldnames=fieldnames)
+#    for i in values:
+#        print i
+#    writer = csv.writer(f)
+    headers = {}
+    for n in fieldnames:
+        headers[n] = n
+    writer.writerow(headers)
+    for i in values:
+        print i
+        writer.writerows(i)
+        for o in i:
+            if isinstance(i[o], str):
+                print o
+#                print i[o].encode("utf-8")
+#                writer.writerows(i[o].encode("utf-8"))
+#            else:
+#                print i[o]
+#                writer.writerows(i[o])
+#            print o.values().encode("utf-8", "ignore")
+#        writer.writerow(i)
+#    writer.writerow(values)
+'''
 
 def log():
     # This will open the LOG-file that is in the root-folder of the project and write the lines that are in _log and then empty _log

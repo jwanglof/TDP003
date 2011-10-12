@@ -40,3 +40,6 @@ INSTALLATION:
 		    * Restarting with reloader
 		The website is now running
 		Head over to http://127.0.0.1:5000 in your web browser and you should see the portfolio
+
+VALIDATION:
+	If you want to make sure this project is done as the API instructs you can run "python2.7 web/data_test.py"

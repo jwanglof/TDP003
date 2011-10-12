@@ -121,39 +121,6 @@ def page_admin():
     data_error = data._error_meaning[data._error_code]
     return render_template("admin.html", data=data._data, data_error=data_error)
 
-#@app.route("/tools/apply", method=["GET", "POST"])
-#def tools_apply(data):
-#    data.init()
-#    if data == "id":
-#        return render_template("home.html")
-
-@app.route("/tools/<path:tool>", methods=["GET", "POST"])
-def tools(tool):
-    data.init()
-    s_id = None
-    keys = None
-    te = None
-    _data = data._data
-    if tool == "edit":
-        page = "edit.html"
-    elif tool == "submit":
-        page = "test.html"
-    elif tool[0:7] == "edit_id":
-        page = "edit_id.html"
-        _data = data.lookup_project(tool[8:10])[1]
-        s_id = tool[8:10]
-        keys = data._data[0].keys()
-
-        techs = data.retrieve_techniques()[1]
-        te = ""
-        for p in techs:
-            te += p + ","
-    elif tool[0:5] == "apply":
-        page = "edit.html"
-
-    # Don't need tool, just for dev
-    return render_template("tools/" + page, data=_data,tool=tool,s_id=s_id,keys=keys,techs=te)
-
 @app.route("/login", methods=["GET", "POST"])
 def page_login():
     error = None
@@ -176,5 +143,42 @@ def logout():
     flash("You were logged out.")
     return redirect(url_for("page_home"))
 
+# This is for the editing of an entry in the CSV file. Won't work, read in data.py why.
+#@app.route("/tools/apply", method=["GET", "POST"])
+#def tools_apply(data):
+#    data.init()
+#    if data == "id":
+#        return render_template("home.html")
+'''
+@app.route("/tools/<path:tool>", methods=["GET", "POST"])
+def tools(tool):
+    data.init()
+    s_id = None
+    keys = None
+    te = None
+    _data = data._data
+    if tool == "edit":
+        page = "edit.html"
+    elif tool == "submit":
+        page = "test.html"
+    elif tool[0:7] == "edit_id":
+        page = "edit_id.html"
+        _data = data.lookup_project(tool[8:10])[1]
+        s_id = tool[8:10]
+        keys = data._data[0].keys()
+
+        techs = data.retrieve_techniques()[1]
+        te = ""
+        for p in techs:
+            te += p + ","
+
+    elif tool[0:5] == "apply":
+        
+        page = "edit.html"
+
+    # Don't need tool, just for dev
+    return render_template("tools/" + page, data=_data,tool=tool,s_id=s_id,keys=keys,techs=te)
+'''
+
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)

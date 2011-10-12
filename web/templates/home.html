@@ -1,6 +1,12 @@
 {% extends "layout.html" %}
 {% block content %}
-   An introducation of the authors and about the site.
+   <h1>An introducation of the authors and about the site.</h1>
    <br />
-   Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+   This site is created by Johan Wänglöf and Simon Engström for our class, TDP003. We were given the task to write a portfolio where we can "show off" our projects we're doing in school to future employers.
+   <br />
+   The design isn't that pretty and the code is probably not that optimized but it works ;)
+   <p>
+     <img src="{{ url_for("images", filename="johan.jpg") }}" width="200px" />
+     <img src="{{ url_for("images", filename="simon.jpg") }}" />
+   </p>
 {% endblock %}
