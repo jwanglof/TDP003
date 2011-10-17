@@ -1,6 +1,7 @@
 #! /usr/bin/python
 # -*- coding: utf-8 -*-
 import csv, os, time, re, codecs
+import unicodedata
 
 # Error-code meaning:
 #   0 = OK
@@ -109,7 +110,6 @@ def lookup_project(id):
     return (_error_code, _proj)
 
 def retrieve_projects(sort_by="start_date", sort_order="asc", techniques=[], search="", search_fields=[]):
-    init()
     # Loop through all the projects in _data
     # Create another loop inside the first one that goes through all the techniques that are specified
     # It checks if that technique is in the current project's techniques list
@@ -130,7 +130,7 @@ def retrieve_projects(sort_by="start_date", sort_order="asc", techniques=[], sea
         _fields = search_fields
     else:
         _fields = None
-
+    
     if isinstance(search, str) and len(search) > 0:
         search = unicode(search, "utf-8")
     elif isinstance(search, unicode):
@@ -209,8 +209,8 @@ def retrieve_projects(sort_by="start_date", sort_order="asc", techniques=[], sea
         _new_list = _data
     else:
         _log.append("Called retrieve_projects() with argument(s) at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + "\n")
-        _log.append("\t Argument(s): \n\t\t Techniques: " + str(_techs) + " \n\t\t Search fields: " + str(_fields) + " \n\t\t Search string: " + str(search) + " \n\t\t Sorted by key: " + str(sort_by) + " \n\t\t Shown as: " + str(sort_order) + "\n")
-
+        _log.append("\t Argument(s): \n\t\t Techniques: " + str(_techs) + " \n\t\t Search fields: " + str(_fields) + " \n\t\t Search string: " + unicodedata.normalize("NFKD", search).encode("ascii", "ignore") + " \n\t\t Sorted by key: " + str(sort_by) + " \n\t\t Shown as: " + str(sort_order) + "\n")
+    
     log()
     return (_error_code, _new_list)
 
@@ -333,7 +333,7 @@ def log():
     # This will open the LOG-file that is in the root-folder of the project and write the lines that are in _log and then empty _log
 
     global _log
-
+    print _log
     try:
         f = open("../LOG", "a")
         f.writelines(_log)
