@@ -1,6 +1,6 @@
-#! /usr/bin/env python
-# coding: utf-8
-import csv, os, time
+#! /usr/bin/python
+# -*- coding: utf-8 -*-
+import csv, os, time, re, codecs
 
 # Error-code meaning:
 #   0 = OK
@@ -90,22 +90,19 @@ def project_count():
 
 def lookup_project(id):
     # To get a specific project's details
-    # Will return _proj as a dictionary
+    # Will return _proj as a dictionary, or as None
 
     global _error_code
     global _data
 
     _proj = {}
-    for i in _data:
-        if int(i["project_no"]) == int(id):
-            _proj = i
-            
-    if len(_proj) == 0:
-        _error_code = 2
+    if re.findall("[\d.]*\d+", id):
+        _proj = [i for i in _data if int(i["project_no"]) == int(id)]
+        _log.append("Called lookup_project(id) with id: " + str(id) + " at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ".\n")
+    else:
         _proj = None
         _log.append("Failed to call lookup_project(id) with id:" + str(id) + " at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ". Error-code: " + str(_error_code) + "\n")
-    else:
-        _log.append("Called lookup_project(id) with id: " + str(id) + " at " + str(time.strftime("%Y-%m-%d %H:%M:%S")) + ".\n")
+        _error_code = 2
 
     log()
 

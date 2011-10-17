@@ -1,18 +1,19 @@
-#!/usr/bin/env python
-# coding: utf-8
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
 
 # imports
 from flask import Flask, request, session, g, redirect, url_for, abort, render_template, flash, Response
-import data
+import data,re
 
 # Configuration
-DEBUG = True
 SECRET_KEY = "flaskrtdp003"
 USERNAME = "tdp003"
 PASSWORD = "tdp0033"
 
 app = Flask(__name__)
 app.config.from_object(__name__)
+app.debug = True
+app.host = "0.0.0.0"
 
 # Change to True when the site is live
 #app.config.from_envvar('../FLASKR_SETTINGS', silent=False)
@@ -64,12 +65,10 @@ def page_list():
 def page_project(id):
     data.init()
     _project = data.lookup_project(id)[1]
-    _error = data.lookup_project(id)[0]
 
-    if _error > 0:
+    if _project == None:
         _project = ""
-#        _error = data._error_meaning[_error]
-
+    
     data_error = data._error_meaning[data._error_code]
     return render_template("project.html", _db_data=_project, data_error=data_error)
 
@@ -95,6 +94,7 @@ def page_search():
 
     # keys is for the checkboxes
     keys = data._data[0].keys()
+
     techs = data.retrieve_techniques()[1]
     error = ""
     sstring = ""
@@ -180,5 +180,9 @@ def tools(tool):
     return render_template("tools/" + page, data=_data,tool=tool,s_id=s_id,keys=keys,techs=te)
 '''
 
+@app.errorhandler(404)
+def page_not_found(error):
+    return "This page does not exists", 404
+
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run()
