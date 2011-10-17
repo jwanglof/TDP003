@@ -108,7 +108,8 @@ def lookup_project(id):
 
     return (_error_code, _proj)
 
-def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search="",search_fields=[]):
+def retrieve_projects(sort_by="start_date", sort_order="asc", techniques=[], search="", search_fields=[]):
+    init()
     # Loop through all the projects in _data
     # Create another loop inside the first one that goes through all the techniques that are specified
     # It checks if that technique is in the current project's techniques list
@@ -151,11 +152,30 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
                     _list.append(rows)
     else:
         _list = _data[:]
-
+    
     # Creates a new list to add the data that are sorted out by the search criteria
     # 
     # If there aren't any new search criterias the new list will only get the data from _list
     _new_list = []
+
+    if _fields != None:
+        field = [x for x in _fields]
+        for row in _list:
+            for x in _fields:
+                if search != None:
+                    if type(row[x]) is not unicode:
+                        row[x] = unicode(str(row[x]), "utf-8")
+                    
+                    if search.lower() in row[x].lower():
+                        _new_list.append(row)
+                        break
+                else:
+                    # Add everything to the new_list because no search string
+                    _new_list = _list[:]
+
+
+    '''
+    The old
     if search != None:
         if _fields != None:
             for field in _fields:
@@ -167,13 +187,15 @@ def retrieve_projects(sort_by="start_date",sort_order="asc",techniques=[],search
 
                     if search.lower() in r_string.lower():
                         _new_list.append(row)
+                    ww += 1
         else:
             # Que?
             _error_code = 1
+            # Need to look in all search_fields that exists
     else:
         _new_list = _list[:]
     # End of "check what to look for"
-
+    '''
     # Checks to see if the search-result should be returned descending or ascending
     if isinstance(sort_order, str) and len(sort_order) > 0:
         if sort_order == "desc":

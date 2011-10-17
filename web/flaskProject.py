@@ -99,20 +99,25 @@ def page_search():
     error = ""
     sstring = ""
     
-    if request.method == "POST":
-        _s_string = request.form["search_string"]
-        _s_categories = request.form.getlist("search_categories")
-        _s_sort_by = request.form["sort_category"]
-        _s_sort_order = str(request.form["sort_order"])
-        _s_techniques = request.form.getlist("search_techniques")
+    _search = {"sort_by": "", "sort_order": "", "techniques": [], "search": "", "search_fields": []}
 
-        if len(_s_categories) > 0:
-            sstring = data.retrieve_projects(sort_by=_s_sort_by, sort_order=_s_sort_order, techniques=_s_techniques, search=_s_string, search_fields=_s_categories)[1]
-        else:
-            error = "You must specify at least one category to search in!"
+    if request.method == "POST":
+        _search["sort_by"] = request.form["sort_category"]
+        _search["sort_order"] = str(request.form["sort_order"])
+        _search["techniques"] = request.form.getlist("search_techniques")
+        _search["search"] = request.form["search_string"]
+        _search["search_fields"] = request.form.getlist("search_categories")
+
+        if len(_search["search_fields"]) == 0:
+            _search["search_fields"] = keys
+
+        sstring = data.retrieve_projects(sort_by=_search["sort_by"], sort_order=_search["sort_order"], techniques=_search["techniques"], search=_search["search"], search_fields=_search["search_fields"])
+
+    if sstring == None:
+        sstring = ""
 
     data_error = data._error_meaning[data._error_code]
-    return render_template("search.html", _search_result = sstring, keys=keys, techs=techs, error=error, data_error=data_error)
+    return render_template("search.html", _search_result = sstring, keys=keys, techs=techs, error=error, data_error=data_error, _asd=_search)
 
 @app.route("/admin")
 def page_admin():
